@@ -112,6 +112,32 @@ Criando e manipulando Animais:
 
 Dica: Utilize `console.log()` para exibir as informações!
 
+**Resposta:**
+````javascript
+// Criar uma classe chamada Animal
+class Animal {
+    // Construtor da classe Animal que recebe como atributos nome e idade
+    constructor(nome , idade){
+        this.nome = nome
+        this.idade = idade
+    }
+
+    // Criação de um método chamado descrever o animal
+    descrever() {
+        // Printar no console uma mensagem com o nome e a idade do animal
+        console.log(`A idade do animal é ${this.nome}, ele tem ${this.idade} anos`);
+    }
+}
+    // Criar uma instância chamada cao dentro da classe Animal, naqual seu nome é "cachorro" e sua idade é 8
+    let cao = new Animal ("cachorro", 8);
+    // Chamar o método descrever da instância cao para printar a descrição do animal 
+    cao.descrever();
+
+    // Criar uma instância chamada gato dentro da classe Animal, naqual seu nome é "gato" e sua idade é 10
+    let gato = new Animal ("gato", 10);
+    // Chamar o método descrever da instância gato para printar a descrição do animal 
+    gato.descrever();
+    ```
 ______
 
 **8)** Nos últimos dias tivemos a oportunidade de ter contato com Programação Orientada a Objetos, e tivemos contato com o tema "herança". Herança é um princípio de orientação a objetos, que permite que classes compartilhem atributos e métodos. Ela é usada na intenção de reaproveitar código ou comportamento generalizado ou especializar operações ou atributos. Então vamos praticar esse conteúdo nessa questão.
