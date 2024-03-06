@@ -113,6 +113,7 @@ Criando e manipulando Animais:
 Dica: Utilize `console.log()` para exibir as informações!
 
 **Resposta:**
+
 ```javascript
 // Criar uma classe chamada Animal
 class Animal {
