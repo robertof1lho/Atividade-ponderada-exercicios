@@ -138,7 +138,7 @@ class Animal {
     let gato = new Animal ("gato", 10);
     // Chamar o método descrever da instância gato para printar a descrição do animal 
     gato.descrever();
-    ```
+```
 
 
 ______
