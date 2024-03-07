@@ -1,4 +1,4 @@
-// Definição da classe Animal
+// Criação da classe Animal
 class Animal {
     // Construtor da classe Animal
     constructor(nome, idade) {
@@ -16,7 +16,7 @@ class Animal {
 class Gato extends Animal {
     // Construtor da classe Gato
     constructor(nome, idade, cor) {
-        super(nome, idade); // Chamada ao construtor da classe Animal
+        super(nome, idade); // Chamar atributos do construtor da classe Animal
         this.cor = cor;
     }
 
