@@ -227,7 +227,7 @@ Chamando o Método para Ver o Total:
 
 Dica: Utilize console.log() para exibir as informações!
 
-**Resposta**
+**Resposta:**
 ```javascript
 // Criação da classe SomadordeNotas
 class SomadorDeNotas {
@@ -282,7 +282,7 @@ Agora, sua tarefa é escrever um código em JavaScript que crie as classes Funci
 
 Certifique-se de explicar cada parte do código utilizando comentários, explicando para que serve cada atributo e método, bem como a lógica por trás do cálculo de salário para o tipo de funcionário Professor.
 
-**Resposta**
+**Resposta:**
 ```javascript
 // Criar classe Funcionarios
 class Funcionarios {
@@ -323,5 +323,5 @@ let professor1 = new Professor("Joana", 32, 3100, "Física", 20, 34);
 // Criar objeto professor2 da classe Professor
 let professor2 = new Professor("Mauro", 29, 2800,"Música", 9, 27);
     professor2.calcularSalario(professor2.HorasAulaPSemana, professor2.ValorHoraAula); // Usar os atributos do professor2 para calcular seu salário final
-    professor2.salarioFinal(); // Chamar salarioFinal para printar o salario total do professor2
-    ```
+    professor2.salarioFinal(); // Chamar salarioFinal para printar o salario total do professor2  
+```  
