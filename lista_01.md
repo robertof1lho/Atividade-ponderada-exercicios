@@ -166,7 +166,46 @@ Chamando os Métodos:
 
 Dica: Utilize console.log() para exibir as informações!
 
+**Resposta:**
 
+```javascript
+// Definição da classe Animal
+class Animal {
+    // Construtor da classe Animal
+    constructor(nome, idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    // Método para descrever o animal
+    descrever() {
+        console.log(`\nO nome do animal é ${this.nome} e sua idade é ${this.idade} anos`);
+    }
+}
+
+// Definição da classe Gato que herda de Animal
+class Gato extends Animal {
+    // Construtor da classe Gato
+    constructor(nome, idade, cor) {
+        super(nome, idade); // Chamada ao construtor da classe Animal
+        this.cor = cor;
+    }
+
+    // Método específico para Gato para fazer o gato miar
+    miar() {
+        console.log(`Miauuuu... Miauuu...`);
+    }
+}
+
+// Criação de um objeto de Animal chamado cao 
+let cao = new Animal("Cachorro", "4");
+cao.descrever(); // Chama o método descrever do Animal
+
+// Criação de um objeto de Gato
+let gato = new Gato("Gato", "9", "marrom e branco");
+gato.descrever(); // Chama o método descrever do Gato
+gato.miar(); // Chama o método miar do Gato
+```
 ______
 
 **9)** Vamos criar um programa em JavaScript para somar notas!
@@ -188,7 +227,40 @@ Chamando o Método para Ver o Total:
 
 Dica: Utilize console.log() para exibir as informações!
 
+**Resposta**
+```javascript
+// Criação da classe SomadordeNotas
+class SomadorDeNotas {
+    // Criação do atributo total 
+    constructor () {
+    this.total = 0 // O atributp total inicializa com note 0
+    }
 
+    // Criação de um método para adicionar as notas ao total
+    AdicionarNota(nota) {
+        
+        this.total += nota;  
+    }
+
+    // Criação de um método para exebir a nota total final
+    verTotal() {
+        console.log(`Sua nota total final foi ${this.total}`)
+    }
+}
+
+// Criação de um objeto a partir da classe SomadorDeNotas
+const somador = new SomadorDeNotas();
+
+//  Chamar o método AsidionalNota e adicional a nota 4
+somador.AdicionarNota(4);
+//  Chamar o método AsidionalNota e adicional a nota 3
+somador.AdicionarNota(3);
+//  Chamar o método AsidionalNota e adicional a nota 8
+somador.AdicionarNota(8);
+
+//  Chamar o método verTotal para printar o total das notas após as alterações
+somador.verTotal();
+```
 ______
 
 **10)** Imagine que você está criando um programa em JavaScript para uma escola. Neste programa, existem diferentes tipos de funcionários, cada um com suas próprias características. Considere as seguintes classes:
@@ -209,3 +281,47 @@ Agora, sua tarefa é escrever um código em JavaScript que crie as classes Funci
 - Para cada objeto, chame o método calcularSalario() e mostre o salário calculado no console.
 
 Certifique-se de explicar cada parte do código utilizando comentários, explicando para que serve cada atributo e método, bem como a lógica por trás do cálculo de salário para o tipo de funcionário Professor.
+
+**Resposta**
+```javascript
+// Criar classe Funcionarios
+class Funcionarios {
+    // Criar atributos Nome, Idade e SalarioBase para a classe
+    constructor(Nome, Idade, SalarioBase ) {
+        this.Nome = Nome
+        this.Idade = Idade
+        this.SalarioBase = SalarioBase
+        this.salarioTotal = 0 // O salário total inicializa em 0
+    }
+
+    // Método para calcular o salário do funcionaio baseado na consdições impostas
+    calcularSalario(HorasAulaPSemana, ValorHoraAula) {
+        this.salarioTotal = this.SalarioBase + (HorasAulaPSemana * ValorHoraAula) // Salário total igual ao salário base mais horas aulo por semana vezes valor da hora aula
+    }
+
+    // Método para printar os atributos e o salario final do funcionario
+    salarioFinal() {
+        console.log(`${this.Nome}, ${this.Idade} anos, professor(a) de ${this.Disciplina} ganha R$ ${this.salarioTotal} ao mês.`)
+    }
+} 
+
+// Criar classe Professor com herança da classe Funcionarios
+class Professor extends Funcionarios {
+    constructor(Nome, Idade, SalarioBase, Disciplina, HorasAulaPSemana, ValorHoraAula ) {
+        super(Nome, Idade, SalarioBase) // Atributos herdados da clase Funcionarios
+        this.Disciplina = Disciplina // Novo atributo da classe Professor
+        this.HorasAulaPSemana = HorasAulaPSemana // Novo atributo da classe Professor
+        this.ValorHoraAula = ValorHoraAula // Novo atributo da classe Professor
+    }
+}
+
+// Criar objeto professor1 da classe Professor
+let professor1 = new Professor("Joana", 32, 3100, "Física", 20, 34);
+    professor1.calcularSalario(professor1.HorasAulaPSemana, professor1.ValorHoraAula); // Usar os atributos do professor1 para calcular seu salário final
+    professor1.salarioFinal(); // Chamar salarioFinal para printar o salario total do professor1
+
+// Criar objeto professor2 da classe Professor
+let professor2 = new Professor("Mauro", 29, 2800,"Música", 9, 27);
+    professor2.calcularSalario(professor2.HorasAulaPSemana, professor2.ValorHoraAula); // Usar os atributos do professor2 para calcular seu salário final
+    professor2.salarioFinal(); // Chamar salarioFinal para printar o salario total do professor2
+    ```
